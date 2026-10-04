@@ -32,3 +32,21 @@ A API sobe em `http://localhost:3000/api`. Os dados ficam em memória e somem qu
 ## Desafios feitos
 
 Mensagens de erro personalizadas em todos os validadores do `CreateProjetoDto`, no mesmo padrão usado em tarefas.
+
+## Testes no Postman
+
+Criar projeto (201):
+
+![201](prints/201-criar.jpeg)
+
+Validação do nome (400):
+
+![400](prints/400-validacao.jpeg)
+
+Projeto não encontrado (404):
+
+![404](prints/404-nao-encontrado.jpeg)
+
+Remover projeto (204):
+
+![204](prints/204-deletar.jpeg)
