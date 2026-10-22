@@ -43,6 +43,6 @@ export class TarefasController {
   @Delete(':id')
   @HttpCode(204)
   remove(@Param('id', ParseIntPipe) id: number) {
-    this.tarefasService.remove(id);
+    return this.tarefasService.remove(id);
   }
 }
