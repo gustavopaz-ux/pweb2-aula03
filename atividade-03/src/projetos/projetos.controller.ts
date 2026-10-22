@@ -43,6 +43,6 @@ export class ProjetosController {
   @Delete(':id')
   @HttpCode(204)
   remove(@Param('id', ParseIntPipe) id: number) {
-    this.projetosService.remove(id);
+    return this.projetosService.remove(id);
   }
 }
