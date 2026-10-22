@@ -1,6 +1,7 @@
 import 'reflect-metadata';
 import { DataSource, DataSourceOptions } from 'typeorm';
 import { Tarefa } from './tarefas/entities/tarefa.entity';
+import { Projeto } from './projetos/entities/projeto.entity';
 
 export const dataSourceOptions: DataSourceOptions = {
   type: 'postgres',
@@ -9,7 +10,7 @@ export const dataSourceOptions: DataSourceOptions = {
   username: process.env.DB_USER || 'todo',
   password: process.env.DB_PASS || 'todo',
   database: process.env.DB_NAME || 'todo',
-  entities: [Tarefa],
+  entities: [Tarefa, Projeto],
   synchronize: false,
 };
 
