@@ -5,7 +5,7 @@
 > responsabilidade** — buscar dados, aplicar regras e montar a interface — em
 > cada uma delas?
 
-Este repositório traz **a mesma loja** (listagem de produtos + página de
+Este projeto traz **a mesma loja** (listagem de produtos + página de
 detalhe) implementada em **três arquiteturas diferentes**, para mostrar a
 evolução do desenvolvimento Web:
 
@@ -17,7 +17,7 @@ evolução do desenvolvimento Web:
 3) API + Front apartado       API que só devolve dados (Node) + SPA (React)
 ```
 
-Os **produtos são os mesmos** nos três projetos — só muda **como** o código é
+Os **produtos são os mesmos** nas três arquiteturas — só muda **como** o código é
 organizado.
 
 ---
@@ -35,9 +35,10 @@ docker compose version
 
 ## Executando tudo
 
-Na raiz do repositório:
+Dentro da pasta `Projeto1`:
 
 ```bash
+cd Projeto1
 docker compose up --build
 ```
 
@@ -47,7 +48,7 @@ Em outro terminal:
 docker ps
 ```
 
-| Projeto | Arquitetura            | URL                          | Tecnologia        |
+| Nº      | Arquitetura            | URL                          | Tecnologia        |
 | ------- | ---------------------- | ---------------------------- | ----------------- |
 | 1       | Monólito "tudo junto"  | http://localhost:8091        | PHP + SQLite      |
 | 2       | MVC                    | http://localhost:8092        | Laravel + Blade   |
@@ -59,7 +60,7 @@ docker ps
 
 ---
 
-## Projeto 1 — Monólito "tudo junto"
+## Arquitetura 1 — Monólito "tudo junto"
 
 **URL:** http://localhost:8091
 
@@ -81,7 +82,7 @@ Clique em um produto para ir a `produto.php?id=...` (o detalhe, também "tudo ju
 
 ---
 
-## Projeto 2 — MVC (separando responsabilidades)
+## Arquitetura 2 — MVC (separando responsabilidades)
 
 **URL:** http://localhost:8092
 
@@ -106,7 +107,7 @@ Percorra os arquivos na aula, nesta ordem:
 
 ---
 
-## Projeto 3 — API + Front apartado
+## Arquitetura 3 — API + Front apartado
 
 **URLs:** API em http://localhost:8093 · Front em http://localhost:8094
 
@@ -146,7 +147,7 @@ conversam por HTTP. A mesma API serve web, mobile, outro servidor, etc.
 
 ## Comparando as três arquiteturas
 
-| Responsabilidade        | Projeto 1 (monólito) | Projeto 2 (MVC)          | Projeto 3 (API + React)     |
+| Responsabilidade        | Arquitetura 1 (monólito) | Arquitetura 2 (MVC)          | Arquitetura 3 (API + React)     |
 | ----------------------- | -------------------- | ------------------------ | --------------------------- |
 | Buscar dados            | `$pdo->query()` no arquivo da página | Model (Eloquent)   | API (endpoint JSON)         |
 | Regras / decisões       | Misturadas no HTML   | Controller               | API (servidor)              |
@@ -158,9 +159,9 @@ conversam por HTTP. A mesma API serve web, mobile, outro servidor, etc.
 **Onde a lógica de tela é executada:**
 
 ```text
-Projeto 1:  servidor gera o HTML   (tudo junto)
-Projeto 2:  servidor gera o HTML   (mas organizado em camadas)
-Projeto 3:  servidor gera DADOS  →  navegador gera o HTML
+Arquitetura 1:  servidor gera o HTML   (tudo junto)
+Arquitetura 2:  servidor gera o HTML   (mas organizado em camadas)
+Arquitetura 3:  servidor gera DADOS  →  navegador gera o HTML
 ```
 
 ---
@@ -177,7 +178,7 @@ docker compose up --build -d
 # containers em execução
 docker ps
 
-# logs da API (Projeto 3)
+# logs da API (Arquitetura 3)
 docker compose logs -f api
 
 # parar
@@ -188,7 +189,7 @@ docker compose down
 
 ## Tecnologias e versões
 
-| Projeto | Stack                     | Imagem / versão            |
+| Arquitetura | Stack                     | Imagem / versão            |
 | ------- | ------------------------- | -------------------------- |
 | 1       | PHP + SQLite (PDO)        | `php:8.3-cli`              |
 | 2       | Laravel + Blade + SQLite  | `php:8.3-cli`, Laravel stable via `composer:2` |
