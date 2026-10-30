@@ -1,3 +1,5 @@
+import { UseGuards } from '@nestjs/common';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import {
   Body,
   Controller,
@@ -13,6 +15,7 @@ import { CreateProjetoDto } from './dto/create-projeto.dto';
 import { UpdateProjetoDto } from './dto/update-projeto.dto';
 import { ProjetosService } from './projetos.service';
 
+@UseGuards(JwtAuthGuard)
 @Controller('projetos')
 export class ProjetosController {
   constructor(private readonly projetosService: ProjetosService) {}
