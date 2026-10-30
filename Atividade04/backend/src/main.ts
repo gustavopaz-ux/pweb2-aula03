@@ -1,11 +1,13 @@
-import { NestFactory } from '@nestjs/core';
-import { ValidationPipe } from '@nestjs/common';
-import { AppModule } from './app.module';
+import { NestFactory } from "@nestjs/core";
+import { ValidationPipe } from "@nestjs/common";
+import cookieParser from "cookie-parser";
+import { AppModule } from "./app.module";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  app.setGlobalPrefix('api');
+  app.use(cookieParser());
+  app.setGlobalPrefix("api");
 
   app.useGlobalPipes(
     new ValidationPipe({
@@ -16,6 +18,6 @@ async function bootstrap() {
   );
 
   await app.listen(3000);
-  console.log('API NestJS em http://localhost:3000/api');
+  console.log("API NestJS em http://localhost:3000/api");
 }
 bootstrap();
