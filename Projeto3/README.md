@@ -1,6 +1,6 @@
-# Atividade 03: persistência com PostgreSQL e TypeORM
+# Projeto 3: persistência com PostgreSQL e TypeORM
 
-Continuação da atividade 02. Os módulos de Tarefas e de Projetos deixaram de guardar os dados em um array na memória e passaram a usar tabelas no PostgreSQL, através do TypeORM.
+Continuação do Projeto 2. Os módulos de Tarefas e de Projetos deixaram de guardar os dados em um array na memória e passaram a usar tabelas no PostgreSQL, através do TypeORM.
 
 ## Como rodar
 
@@ -55,4 +55,4 @@ O `migration:revert` desfaz a última migration. O seed apaga os dados das duas 
 | PUT | /api/tarefas/:id | 200 |
 | DELETE | /api/tarefas/:id | 204 |
 
-As rotas de `/api/projetos` seguem o mesmo padrão. A validação dos campos continua igual à da atividade 02.
+As rotas de `/api/projetos` seguem o mesmo padrão. A validação dos campos continua igual à do Projeto 2.

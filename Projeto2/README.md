@@ -1,4 +1,4 @@
-# CRUD de Projetos (NestJS)
+# Projeto 2: CRUD de Projetos (NestJS)
 
 Atividade em casa da Aula 05 de Programação para Web 2. Continuação do backend de Tarefas feito em aula, agora com o recurso Projetos.
 
