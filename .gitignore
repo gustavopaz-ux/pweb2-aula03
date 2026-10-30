@@ -20,14 +20,14 @@ pnpm-debug.log*
 *.local
 
 # ----- Laravel (Projeto 2) -----
-Projeto1/02-mvc-laravel/vendor/
-Projeto1/02-mvc-laravel/node_modules/
-Projeto1/02-mvc-laravel/public/build/
-Projeto1/02-mvc-laravel/storage/framework/cache/*
-Projeto1/02-mvc-laravel/storage/framework/sessions/*
-Projeto1/02-mvc-laravel/storage/framework/views/*
-Projeto1/02-mvc-laravel/storage/logs/*
-Projeto1/02-mvc-laravel/bootstrap/cache/*
+Atividade01/02-mvc-laravel/vendor/
+Atividade01/02-mvc-laravel/node_modules/
+Atividade01/02-mvc-laravel/public/build/
+Atividade01/02-mvc-laravel/storage/framework/cache/*
+Atividade01/02-mvc-laravel/storage/framework/sessions/*
+Atividade01/02-mvc-laravel/storage/framework/views/*
+Atividade01/02-mvc-laravel/storage/logs/*
+Atividade01/02-mvc-laravel/bootstrap/cache/*
 
 # ----- Bancos SQLite gerados -----
 *.sqlite

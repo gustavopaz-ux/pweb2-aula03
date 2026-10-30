@@ -35,10 +35,10 @@ docker compose version
 
 ## Executando tudo
 
-Dentro da pasta `Projeto1`:
+Dentro da pasta `Atividade01`:
 
 ```bash
-cd Projeto1
+cd Atividade01
 docker compose up --build
 ```
 
